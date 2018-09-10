@@ -25,35 +25,23 @@
 
           <li>
               <a href="#" class="text-body" v-on:click="toggleDropDown('homeSubmenu')">
-                  <i class="fa fa-money"></i> Welfare <i class="fa fa-caret-down m-o tiny-text"></i>
+                  <i class="fa fa-money"></i> Two Level <i class="fa fa-caret-down m-o tiny-text"></i>
               </a>
               <ul class="collapse list-unstyled mt-3" ref="homeSubmenu">
                   <li>
-                      <a href="/beneficiaries" class="text-black-50">- Beneficiaries</a>
+                      <a href="/" class="text-black-50">- Browse</a>
                   </li>
                   <li>
-                      <a href="/beneficiaries/create" class="text-black-50">- Create</a>
+                      <a href="/" class="text-black-50">- Create</a>
                   </li>
                   <li>
-                      <a href="/beneficiaries/report" class="text-black-50">- Report</a>
+                      <a href="/" class="text-black-50">- Report</a>
                   </li>
               </ul>
           </li>
-         <li>
-              <a href="#" class="text-body" v-on:click="toggleDropDown('burialSubmenu')">
-                  <i class="fa fa-file"></i> Burial Records <i class="fa fa-caret-down m-o tiny-text"></i>
-              </a>
-              <ul class="collapse list-unstyled mt-3" ref="burialSubmenu">
-                  <li>
-                      <a href="/burials" class="text-black-50">- Browse</a>
-                  </li>
-                  <li>
-                      <a href="/burials/create" class="text-black-50">- Create</a>
-                  </li>                 
-              </ul>
-          </li>
+       
           <li>
-              <a href="/users" class="text-body"><i class="fa fa-users"></i> Users</a>
+              <a href="/" class="text-body"><i class="fa fa-users"></i> Users</a>
           </li>
 
       </ul>

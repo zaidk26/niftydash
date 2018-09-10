@@ -1,4 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700);@charset "UTF-8";
+
+.pointer {
+  cursor: pointer;
+}
+
+.max-w-600 {
+  max-width: 600px !important;
+}
+
+.col-primary {
+  color: #45CA58;
+}
+
+.l-height-1 {
+  line-height: 1;
+}
+
+.tiny-text {
+  font-size: 0.7rem !important;
+}
+
+/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10471,9 +10493,110 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+/*
+* === THEME ===
+*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #f1f2f7;
+}
+
+/*
+* — Layout —
+*/
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow-x: hidden;
+}
+
+#content {
+  margin-left: 0;
+  width: 100%;
+}
+
+#content .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1200px) {
+  #content .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  #content {
+    margin-left: 260px;
+  }
+}
+
+/*
+* - Vue Transitions -
+*/
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/*
+* - Componenets -
+*/
+
+.loading-circle {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #45CA58;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  margin: 5px auto;
+}
+
+/*
+* === BOOTSTRAP OVERIDES ===
+*/
+
+/*
+* — Forms —
+*/
+
+.form-control {
+  background: #FCFCFC;
+  border-color: #EEE;
+  font-size: 0.8rem;
+}
+
+/*
+* — Typography —
+*/
+
+.text-success {
+  color: #45CA58;
+}
+
+/*
+* — Buttons —
+*/
+
+.btn-success {
+  background-color: #45CA58;
 }
 

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', 'Dashboard')</title>
 
      <!-- User Info 
           Access this info in Vue to check user info -->
@@ -22,10 +22,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
     <!-- Icon Set -->
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 
@@ -38,7 +34,7 @@
     <!-- Sidebar -->
     @auth
       <side-menu-component 
-        :system="{{ config('app.name', 'Laravel') }}">
+        system="{{ config('app.name') }}">
       </side-menu-component>
     @endauth
 

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -35,5 +36,23 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Overide Login
+     */
+    public function login(Request $request)
+    {
+
+      if (Auth::attempt(['email' => $request->email, 'password' => $request->password],true)) {
+        return response()->json(array(
+          'code'      =>  200,
+          'url'   =>  $this->redirectTo
+        ), 200);    
+      }
+
+      return response()->json(array(
+        'code'      =>  401,
+        'message'   =>  "incorrect credentials"), 401);
     }
 }

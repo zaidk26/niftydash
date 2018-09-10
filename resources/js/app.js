@@ -2,6 +2,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+//autosize
+import autosize from 'autosize';
+
 //Lazy Load
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
@@ -19,6 +22,9 @@ Vue.use(Toasted);
 
 
 //Components
+//Auth
+Vue.component('login-component', require('./components/auth/LoginComponent.vue'));
+Vue.component('register-component', require('./components/auth/RegisterComponent.vue'));
 
 //Layout
 Vue.component('top-menu-component', require('./components/layouts/TopMenuComponent.vue'));
