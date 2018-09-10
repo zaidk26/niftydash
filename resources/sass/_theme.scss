@@ -1,0 +1,89 @@
+/*
+* === THEME ===
+*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: $body-bg;
+}
+
+
+/*
+* — Layout —
+*/
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+
+#content {
+  margin-left: 0;
+  width: 100%;
+  .container-fluid {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+  @media (min-width: 1200px) { 
+    .container-fluid {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (min-width: 992px) { 
+  #content {
+    margin-left: 260px;
+  }
+}
+
+
+/*
+* - Componenets -
+*/
+
+.loading-circle {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid $col-primary;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 5px auto;
+}
+
+
+/*
+* === BOOTSTRAP OVERIDES ===
+*/
+
+/*
+* — Forms —
+*/
+
+.form-control{
+  background: #FCFCFC;
+  border-color: #EEE;
+  font-size: 0.8rem;
+}
+
+/*
+* — Typography —
+*/
+
+.text-success{
+  color: $col-primary;
+}
+
+
+/*
+* — Buttons —
+*/
+
+.btn-success{
+  background-color: $col-primary;
+}
