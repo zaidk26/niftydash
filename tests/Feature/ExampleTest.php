@@ -12,10 +12,10 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function test_guest_directed_to_login()
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertRedirect('login')->assertStatus(302);
     }
 }
