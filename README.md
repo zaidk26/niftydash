@@ -1,7 +1,8 @@
 ![sample](/public/images/sample.png)
 
 # Nifty Dash
-Administration dashboard built with Laravel and Vue
+Starting point Administration dashboard built with Laravel and Vue
+Use as you please
 
 
 # Create a user
